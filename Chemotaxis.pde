@@ -7,7 +7,7 @@ void setup () {
   size(400, 400);
   background(167, 167, 167);
   rock = loadImage("chemotaxisrock.jpeg");
-  image(rock, 10, 10, 10, 10);
+  image(rock, 10, 10, 20, 20);
 
   /*
 
