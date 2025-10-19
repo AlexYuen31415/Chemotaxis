@@ -7,7 +7,7 @@ void setup () {
   size(400, 400);
   background(167, 167, 167);
   rock = loadImage("chemotaxisrock.jpg");
-  image(rock, 10, 10, 20, 20);
+  //image(rock, 10, 10, 20, 20);
 
   /*
 
@@ -28,6 +28,10 @@ void setup () {
 
   */
 
+}
+
+void draw() {
+  image(rock, 10, 10, 20, 20);
 }
 
 /*
