@@ -6,7 +6,6 @@ int rpslen = 50;
 void setup () {
   size(400, 400);
   background(167, 167, 167);
-  frameRate(fR);
   rps = new RPS[rpslen];
   for(int i = 0; i < rps.length/3; i++) {
     rps[i] = new RPS(1);
