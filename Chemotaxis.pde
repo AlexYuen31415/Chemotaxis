@@ -101,9 +101,11 @@ void draw () {
   
   
   for (int j = 0; j < (rps.length/3)*3; j++) {
+    if (rps[j] == null) continue;
     rps[j].show();
+    rps[j].hitbox();
     for (int k = 0; k < (rps.length/3)*3; k++) {
-      rps[j].hitbox();
+      if (rps[k] == null || j == k) continue;
       rps[k].hitbox();
       int check = 0;
       if (rps[j].right >= rps[k].left) {check++;}
