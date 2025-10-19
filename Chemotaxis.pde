@@ -50,6 +50,7 @@ class RPS {
     float a = mX - myX;
     float b = mY - myY;
     float c = Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2));
+    if (c < 0.001) {c = 0.001;}
     if (mode == mouseMode && mousePressed) {
       myX += -a/a*2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(30);
       myY += -b/b*2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(30);
