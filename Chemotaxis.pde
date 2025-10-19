@@ -49,7 +49,6 @@ class RPS {
     if (mode == mouseMode) {
       myX += a/Math.pow(c, 2/3) + Math.random()*Math.pow(c, 1/6);
       myY += b/Math.pow(c, 2/3) + Math.random()*Math.pow(c, 1/6);
-      println((float)myX, (float)myY, (float)(a/Math.pow(c, 2/3)), (float)(b/Math.pow(c, 2/3)));
     } else {
       myX += (((int)(Math.random())*2)-1)*5+Math.random()*10;
       myY += (((int)(Math.random())*2)-1)*5+Math.random()*10;
