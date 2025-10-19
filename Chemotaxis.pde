@@ -1,7 +1,7 @@
 //RPS [] rps;
 PImage rock;
-PImage paper; 
-PImage scissor;
+//PImage paper; 
+//PImage scissor;
 
 void setup () {
   size(400, 400);
