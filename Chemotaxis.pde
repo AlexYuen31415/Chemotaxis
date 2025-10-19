@@ -76,7 +76,6 @@ class RPS {
     else if (mode == mouseMode) {
       myX += 2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(fR/5) + (((int)(Math.random()*2))*2-1)*(size/5);
       myY += 2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(fR/5) + (((int)(Math.random()*2))*2-1)*(size/5);
-      println((((int)(Math.random()*2))*2-1));
     } else {
       myX += (((int)(Math.random()*2))*2-1)*Math.random()*10;
       myY += (((int)(Math.random()*2))*2-1)*Math.random()*10;
@@ -127,7 +126,6 @@ void draw () {
       if (rps[j].left <= rps[k].right) {check ++;}
       if (rps[j].upper <= rps[k].lower) {check ++;}
       if (rps[j].lower >= rps[k].upper) {check ++;}
-      println(check);
       
       if (check >= 4) {
       
