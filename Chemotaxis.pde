@@ -19,8 +19,8 @@ void setup () {
   }
   
   rock = loadImage("chemotaxisrock.jpg");
-  paper = loadImage("chemotaxispaper.png");
-  scissor = loadImage("chemotaxisscissor.png");
+  paper = loadImage("chemotaxispaper.jpg");
+  scissor = loadImage("chemotaxisscissor.jpg");
   
 }
 
