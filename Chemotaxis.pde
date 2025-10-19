@@ -6,7 +6,7 @@ PImage scissor;
 void setup () {
   size(400, 400);
   background(167, 167, 167);
-  rock = loadImage("chemotaxisrock.jpg");
+  rock = loadImage("chemotaxisrock.jpeg");
   image(rock, 10, 10);
 
   /*
@@ -22,9 +22,9 @@ void setup () {
     rps[i] = new RPS(3);
   }
   
-  rock = loadImage("chemotaxisrock.jpg");
-  paper = loadImage("chemotaxispaper.jpg");
-  scissor = loadImage("chemotaxisscissor.jpg");
+  rock = loadImage("chemotaxisrock.jpeg");
+  paper = loadImage("chemotaxispaper.jpeg");
+  scissor = loadImage("chemotaxisscissor.jpeg");
 
   */
 
