@@ -2,7 +2,6 @@ RPS [] rps;
 PImage rock;
 PImage paper; 
 PImage scissor;
-int fR = 60;
 
 void setup () {
   size(400, 400);
@@ -53,12 +52,12 @@ class RPS {
     double b = mY - myY;
     double c = Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2));
     if (mode == mouseMode && mousePressed) {
-      myX += -a/a*2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(fR/2);
-      myY += -b/b*2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(fR/2);
+      myX += -a/a*2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(30);
+      myY += -b/b*2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(30);
     }
     else if (mode == mouseMode) {
-      myX += 2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(fR/5) + (((int)(Math.random()*2))*2-1)*(size/5);
-      myY += 2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(fR/5) + (((int)(Math.random()*2))*2-1)*(size/5);
+      myX += 2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+      myY += 2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
     } else {
       myX += (((int)(Math.random()*2))*2-1)*Math.random()*10;
       myY += (((int)(Math.random()*2))*2-1)*Math.random()*10;
@@ -95,16 +94,15 @@ void draw () {
   
   
   for (int j = 0; j < (rps.length/3)*3; j++) {
-    //rps[i].movement();
     rps[j].show();
     for (int k = 0; k < (rps.length/3)*3; k++) {
       rps[j].hitbox();
       rps[k].hitbox();
       int check = 0;
-      if (rps[j].right >= rps[k].left) {check ++;}
-      if (rps[j].left <= rps[k].right) {check ++;}
-      if (rps[j].upper <= rps[k].lower) {check ++;}
-      if (rps[j].lower >= rps[k].upper) {check ++;}
+      if (rps[j].right >= rps[k].left) {check++;}
+      if (rps[j].left <= rps[k].right) {check++;}
+      if (rps[j].upper <= rps[k].lower) {check++;}
+      if (rps[j].lower >= rps[k].upper) {check++;}
       
       if (check >= 4) {
       
