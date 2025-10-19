@@ -63,10 +63,9 @@ class RPS {
       myX += (((int)(Math.random()*2))*2-1)*Math.random()*10;
       myY += (((int)(Math.random()*2))*2-1)*Math.random()*10;
     }
-    //if (mode == 1) {image(rock, (float)myX, (float)myY, (float)size, (float)size);}
-    //else if (mode == 2) {image(paper, (float)myX, (float)myY, (float)size, (float)size);}
-    //else if (mode == 3) {image(scissor, (float)myX, (float)myY, (float)size, (float)size);}
-    ellipse((float)myX, (float)myY, (float)size, (float)size);
+    if (mode == 1) {image(rock, (float)myX, (float)myY, (float)size, (float)size);}
+    else if (mode == 2) {image(paper, (float)myX, (float)myY, (float)size, (float)size);}
+    else if (mode == 3) {image(scissor, (float)myX, (float)myY, (float)size, (float)size);}
 
   }
 }
