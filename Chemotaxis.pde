@@ -1,6 +1,7 @@
 RPS [] rps;
 PImage rock, paper, scissor;
 int fR = 60;
+frameRate(fR);
 
 void setup () {
   size(400, 400);
@@ -28,7 +29,7 @@ class RPS {
   double myX, myY;
   int mode = 1;
   double left, right, upper, lower;
-  double size = 1250/rpslen;
+  double size = 25;
   
   RPS(int m) {
     myX = Math.random()*400;
