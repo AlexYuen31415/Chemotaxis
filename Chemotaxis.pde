@@ -55,12 +55,12 @@ class RPS {
     float signB; if (b == 0) {signB = 0;} else {signB = b/Math.abs(b);}
 
     if (mode == mouseMode && mousePressed) {
-      myX += -a/a*2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(30);
-      myY += -b/b*2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(30);
+      myX += -signA*2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(30);
+      myY += -signB*2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(30);
     }
     else if (mode == mouseMode) {
-      myX += 2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
-      myY += 2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+      myX += 2*(a/Math.pow(c, 2/3) + signA*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+      myY += 2*(b/Math.pow(c, 2/3) + signB*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
     } else {
       myX += (((int)(Math.random()*2))*2-1)*Math.random()*10;
       myY += (((int)(Math.random()*2))*2-1)*Math.random()*10;
@@ -69,6 +69,10 @@ class RPS {
     else if (mode == 2) {image(paper, (float)myX, (float)myY, (float)size, (float)size);}
     else if (mode == 3) {image(scissor, (float)myX, (float)myY, (float)size, (float)size);}
 
+    if (myX < 0) myX = 400;
+    if (myX > 400) myX = 0;
+    if (myY < 0) myY = 400;
+    if (myY > 400) myY = 0;
   }
 }
 
