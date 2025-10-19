@@ -1,15 +1,14 @@
-//RPS [] rps;
+RPS [] rps;
 PImage rock;
-//PImage paper; 
-//PImage scissor;
+PImage paper; 
+PImage scissor;
 
 void setup () {
   size(400, 400);
   background(167, 167, 167);
   rock = loadImage("chemotaxisrock.jpeg");
-  //image(rock, 10, 10, 20, 20);
-
-  /*
+  paper = loadImage("chemotaxispaper.jpeg");
+  scissor = loadImage("chemotaxisscissor.jpeg");
 
   rps = new RPS[50];
   for(int i = 0; i < rps.length/3; i++) {
@@ -21,20 +20,7 @@ void setup () {
   for(int i = 2*rps.length/3; i < rps.length; i++) {
     rps[i] = new RPS(3);
   }
-  
-  rock = loadImage("chemotaxisrock.jpeg");
-  paper = loadImage("chemotaxispaper.jpeg");
-  scissor = loadImage("chemotaxisscissor.jpeg");
-
-  */
-
 }
-
-void draw() {
-  image(rock, 10, 10, 20, 20);
-}
-
-/*
 
 int mouseMode = 0;
 
@@ -132,5 +118,3 @@ void draw () {
     }
   }
 }
-
-*/
