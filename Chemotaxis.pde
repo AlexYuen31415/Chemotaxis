@@ -18,9 +18,9 @@ void setup () {
     rps[i] = new RPS(3);
   }
   
-  rock = loadImage("data/chemotaxisrock.jpg");
-  paper = loadImage("data/chemotaxispaper.png");
-  scissor = loadImage("data/chemotaxisscissor.png");
+  rock = loadImage("chemotaxisrock.jpg");
+  paper = loadImage("chemotaxispaper.png");
+  scissor = loadImage("chemotaxisscissor.png");
   
 }
 
