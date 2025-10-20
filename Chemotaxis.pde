@@ -15,10 +15,10 @@ void setup () {
     rps[i] = new RPS(1);
   }
   for(int i = rps.length/3; i < 2*rps.length/3; i++) {
-    rps[i] = new RPS(2);
+    rps[i] = new RPS(1);
   }
   for(int i = 2*rps.length/3; i < rps.length; i++) {
-    rps[i] = new RPS(3);
+    rps[i] = new RPS(1);
   }
 }
 
