@@ -108,8 +108,6 @@ void draw () {
       if (rps[k] == null || j == k) continue;
       rps[k].hitbox();
 
-      /*
-
       int check = 0;
       if (rps[j].right >= rps[k].left) {check++;}
       if (rps[j].left <= rps[k].right) {check++;}
@@ -124,7 +122,7 @@ void draw () {
 
       }
 
-      */
+      /*
 
       boolean overlap = !(rps[j].right < rps[k].left ||
                     rps[j].left > rps[k].right ||
@@ -140,6 +138,7 @@ void draw () {
         else if (rps[j].mode == 3 && rps[k].mode == 2) {rps[k].mode = 3;}
       }
 
+      */
 
     }
   }
