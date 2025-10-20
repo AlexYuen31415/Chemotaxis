@@ -120,12 +120,7 @@ void draw () {
       
               if (rps[j].mode == 1 && rps[k].mode == 2) {rps[j].mode = 2;}
          else if (rps[j].mode == 1 && rps[k].mode == 3) {rps[k].mode = 1;}
-         
-         else if (rps[j].mode == 2 && rps[k].mode == 1) {rps[k].mode = 2;}
          else if (rps[j].mode == 2 && rps[k].mode == 3) {rps[j].mode = 3;}
-         
-         else if (rps[j].mode == 3 && rps[k].mode == 1) {rps[j].mode = 1;}
-         else if (rps[j].mode == 3 && rps[k].mode == 2) {rps[k].mode = 3;}
 
       }
 
