@@ -11,14 +11,15 @@ void setup () {
   scissor = loadImage("chemotaxisscissor.jpeg");
 
   rps = new RPS[50];
-  for(int i = 0; i < rps.length/3; i++) {
+int length = rps.length;
+  for(int i = 0; i < length/3; i++) {
     rps[i] = new RPS(1);
   }
-  for(int j = rps.length/3; j < 2*rps.length/3; j++) {
-    rps[j] = new RPS(2);
+  for(int i = length/3; i < 2*length/3; i++) {
+    rps[i] = new RPS(2);
   }
-  for(int k = 2*rps.length/3; k < rps.length; k++) {
-    rps[k] = new RPS(3);
+  for(int i = 2*length/3; i < length; i++) {
+    rps[i] = new RPS(3);
   }
 }
 
