@@ -31,8 +31,8 @@ class RPS {
   float size = 25;
   
   RPS(int m) {
-    myX = Math.random()*400;
-    myY = Math.random()*400;
+    myX = (float)(Math.random()*400);
+    myY = (float)(Math.random()*400);
     mode = m;
     
   }
@@ -49,7 +49,7 @@ class RPS {
     float mY = mouseY;
     float a = mX - myX;
     float b = mY - myY;
-    float c = Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2));
+    float c = (float)(Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2)));
     if (c < 0.001) {c = 0.001;}
     float signA; if (a == 0) {signA = 0;} else {signA = a/Math.abs(a);}
     float signB; if (b == 0) {signB = 0;} else {signB = b/Math.abs(b);}
