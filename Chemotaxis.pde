@@ -107,6 +107,9 @@ void draw () {
     for (int k = 0; k < (rps.length/3)*3; k++) {
       if (rps[k] == null || j == k) continue;
       rps[k].hitbox();
+
+      /*
+
       int check = 0;
       if (rps[j].right >= rps[k].left) {check++;}
       if (rps[j].left <= rps[k].right) {check++;}
@@ -125,6 +128,24 @@ void draw () {
          else if (rps[j].mode == 3 && rps[k].mode == 2) {rps[k].mode = 3;}
 
       }
+
+      */
+
+      boolean overlap = !(rps[j].right < rps[k].left ||
+                    rps[j].left > rps[k].right ||
+                    rps[j].lower < rps[k].upper ||
+                    rps[j].upper > rps[k].lower);
+
+      if (overlap) {
+        if (rps[j].mode == 1 && rps[k].mode == 2) {rps[j].mode = 2;}
+        else if (rps[j].mode == 1 && rps[k].mode == 3) {rps[k].mode = 1;}
+        else if (rps[j].mode == 2 && rps[k].mode == 1) {rps[k].mode = 2;}
+        else if (rps[j].mode == 2 && rps[k].mode == 3) {rps[j].mode = 3;}
+        else if (rps[j].mode == 3 && rps[k].mode == 1) {rps[j].mode = 1;}
+        else if (rps[j].mode == 3 && rps[k].mode == 2) {rps[k].mode = 3;}
+      }
+
+
     }
   }
 }
