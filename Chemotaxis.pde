@@ -69,10 +69,10 @@ class RPS {
     else if (mode == 2) {image(paper, (float)myX, (float)myY, (float)size, (float)size);}
     else if (mode == 3) {image(scissor, (float)myX, (float)myY, (float)size, (float)size);}
 
-    if (myX < 0) myX = 400;
-    if (myX > 400) myX = 0;
-    if (myY < 0) myY = 400;
-    if (myY > 400) myY = 0;
+    if (myX < -100) myX = 500;
+    if (myX > 500) myX = -100;
+    if (myY < -100) myY = 500;
+    if (myY > 500) myY = -100;
   }
 }
 
