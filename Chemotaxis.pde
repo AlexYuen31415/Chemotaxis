@@ -56,18 +56,18 @@ class RPS {
     float signB; if (b == 0) {signB = 0;} else {signB = b/Math.abs(b);}
 
     if (mode == mouseMode && mousePressed) {
-      //myX += -signA*2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(30);
-      //myY += -signB*2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(30);
+      myX += -signA*2*(a + (a/Math.abs(a))*Math.random())/(30);
+      myY += -signB*2*(b + (b/Math.abs(b))*Math.random())/(30);
 
-      myX += -signA*2 + (a/Math.abs(a))*Math.random()/(30);
-      myY += -signB*2 + (b/Math.abs(b))*Math.random()/(30);
+      //myX += -signA*2 + (a)*Math.random()/(30);
+      //myY += -signB*2 + (b)*Math.random()/(30);
     }
     else if (mode == mouseMode) {
-      //myX += 2*(a/Math.pow(c, 2/3) + signA*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
-      //myY += 2*(b/Math.pow(c, 2/3) + signB*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+      myX += 2*(a + signA*Math.random())/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+      myY += 2*(b + signB*Math.random())/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
 
-      myX += 2 + signA*Math.random()/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
-      myY += 2 + signB*Math.random()/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+      //myX += 2 + signA*Math.random()/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+      //myY += 2 + signB*Math.random()/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
     } else {
       myX += (((int)(Math.random()*2))*2-1)*Math.random()*10;
       myY += (((int)(Math.random()*2))*2-1)*Math.random()*10;
