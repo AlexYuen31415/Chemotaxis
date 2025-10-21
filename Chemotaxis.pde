@@ -11,14 +11,14 @@ void setup () {
   scissor = loadImage("chemotaxisscissor.jpeg");
 
   rps = new RPS[50];
-int length = rps.length;
-  for(int i = 0; i < length/3; i++) {
+
+  for(int i = 0; i < rps.length/3; i++) {
     rps[i] = new RPS(1);
   }
-  for(int i = length/3; i < 2*length/3; i++) {
+  for(int i = (int)(rps.length/3); i < 2*rps.length/3; i++) {
     rps[i] = new RPS(2);
   }
-  for(int i = 2*length/3; i < length; i++) {
+  for(int i = 2*(int)(rps.length/3); i < rps.length; i++) {
     rps[i] = new RPS(3);
   }
 }
@@ -56,12 +56,18 @@ class RPS {
     float signB; if (b == 0) {signB = 0;} else {signB = b/Math.abs(b);}
 
     if (mode == mouseMode && mousePressed) {
-      myX += -signA*2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(30);
-      myY += -signB*2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(30);
+      //myX += -signA*2*(a/Math.pow(c, 2/3) + (a/Math.abs(a))*Math.random()*Math.pow(c, 1/2))/(30);
+      //myY += -signB*2*(b/Math.pow(c, 2/3) + (b/Math.abs(b))*Math.random()*Math.pow(c, 1/2))/(30);
+
+      myX += -signA*2 + (a/Math.abs(a))*Math.random()/(30);
+      myY += -signB*2 + (b/Math.abs(b))*Math.random()/(30);
     }
     else if (mode == mouseMode) {
-      myX += 2*(a/Math.pow(c, 2/3) + signA*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
-      myY += 2*(b/Math.pow(c, 2/3) + signB*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+      //myX += 2*(a/Math.pow(c, 2/3) + signA*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+      //myY += 2*(b/Math.pow(c, 2/3) + signB*Math.random()*Math.pow(c, 1/2))/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+
+      myX += 2 + signA*Math.random()/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
+      myY += 2 + signB*Math.random()/(12) + (((int)(Math.random()*2))*2-1)*(size/5);
     } else {
       myX += (((int)(Math.random()*2))*2-1)*Math.random()*10;
       myY += (((int)(Math.random()*2))*2-1)*Math.random()*10;
